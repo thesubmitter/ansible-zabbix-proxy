@@ -106,6 +106,7 @@
 
 - name: "Debian | Install Mysql Client package"
   apt:
+    name:
       - mysql-client
       - "{{ zabbix_python_prefix }}-mysqldb"
   register: are_zabbix_proxy_dependency_packages_installed
@@ -122,6 +123,7 @@
 
 - name: "Debian | Install Mysql Client package for Buster"
   apt:
+    name:
       - mariadb-client
       - "{{ zabbix_python_prefix }}-mysqldb"
   register: are_zabbix_proxy_dependency_packages_installed
