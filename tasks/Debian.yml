@@ -116,6 +116,7 @@
     - zabbix_proxy_database == 'mysql'
     - zabbix_proxy_install_database_client
     - ansible_distribution_release != "buster"
+    - ansible_distribution_release != "focal"
   tags:
     - zabbix-proxy
     - init
@@ -132,7 +133,7 @@
     - zabbix_database_creation or zabbix_database_sqlload
     - zabbix_proxy_database == 'mysql'
     - zabbix_proxy_install_database_client
-    - ansible_distribution_release == "buster"
+    - ansible_distribution_release == "buster" or ansible_distribution_release == "focal"
   tags:
     - zabbix-proxy
     - init
